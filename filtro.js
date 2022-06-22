@@ -75,6 +75,14 @@ const funcActivities = {
 
         activity.all.splice(index, 1);
         App.reload();
+    },
+
+    doneActivity(activityId, status) {
+        const tr = document.getElementById(`activity-${activityId}`);
+        if (status) 
+            tr.style.textDecoration = "line-through";
+        else
+            tr.style.textDecoration = "none";
     }
 }
 
@@ -83,6 +91,7 @@ const DOM = {
 
     showActivity(activity) {
         const tr = document.createElement('tr');
+        tr.setAttribute("id", `activity-${activity.id}`);
         tr.innerHTML = DOM.formatActivity(activity)
 
         DOM.activityContainer.appendChild(tr)
@@ -93,7 +102,7 @@ const DOM = {
 
         const activityAdded = ` 
             <td class="description">${activity.description}</td>
-            <td> <input class="styles-checkbox" onchange="doneActivity(${activity.id})" type="checkbox"></td>
+            <td> <input class="styles-checkbox" onchange="funcActivities.doneActivity(${activity.id}, this.checked)" type="checkbox"></td>
             <td> <img height="20" width="20" src="./Icons/calendar-xmark-solid.svg" onclick="funcActivities.exclude(${activity.id})"></td>
         `
 
@@ -114,10 +123,6 @@ const App = {
         DOM.clearList()
         App.init()
     }
-}
-
-function doneActivity(activityId) {
-    console.log(activityId);
 }
 
 App.init()
