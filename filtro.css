@@ -1,0 +1,146 @@
+/* Global ----------------------------------------------------------------------*/
+:root {
+    --light-blue: #B0C4DE;
+    --slate-blue: #6A5ACD;
+    --midnight-blue: #191970;
+    --ice-white: #f0f2f5;
+    --button-BlueGreen: #72a5e7da;
+    --fire-Red: #fd0202;
+    --backgroud-Input: #c1b6e6;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-blue);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+
+/* Header-------------------------------------------------- */
+
+header {
+    background-color: var(--slate-blue);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 100;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+/* Adicionar / Pesquisar -------------------------------------------------- */
+#inputSections {
+    background-color: var(--slate-blue);
+}
+
+#inputSections .container{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#addForm{
+    color: white;
+    padding: 2rem 0 1.5rem;
+}
+
+#seachForm{
+    color: white;
+    padding: 2rem 0 1.5rem;
+    align-items: right;
+
+    margin-top: 2.rem;
+}
+
+form {
+    display: flex;
+}
+
+.input-group {
+    margin-right: 1rem;
+}
+
+/* /Tabela-------------------------------------------------- */ 
+#activities{
+    margin-top: 2rem;
+}
+
+#activities-table{
+    width: 100%;
+
+    border-spacing: 0px 3px;
+    border-collapse: separate;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+
+    margin-bottom: 5rem;
+}
+
+td {
+    background-color: var(--ice-white);
+}
+
+thead tr {
+    background-color: rgb(129, 96, 138);
+    border: 2px solid black;
+}
+
+
+/* Footer ------------------------------------------------- */
+
+footer {
+
+    text-align: center;
+}
+
+/* Buttons -------------------------------------------------- */ 
+
+button {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var( --fire-Red);
+
+    padding: 5px 5px 5px 5px;
+
+    align-items: center;
+}
+
+/* Input ------------------------------------------------ */ 
+
+.styles-input {
+   width: 250px;
+
+   padding: 5px;
+
+   background: var( --backgroud-Input);
+
+   border-radius: 0.5rem;
+
+   color: black;
+   font-weight: bold;
+
+   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.styles-checkbox{
+    width: 17px;
+    height: 17px;
+
+    color: rgb(67, 67, 85);
+}
+

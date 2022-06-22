@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./filtro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,600;1,100;1,300;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <header id="logo">
+        <h1>To do dev.List</h1>
+    </header>
+
+    <main>
+
+        <section id="inputSections">
+            <div class="container">
+                <div id="addForm">
+                    <h2>Adicionar</h2>
+                    <form action="" onsubmit="return false">
+
+                        <div class="input-group">
+                            <label for="add"></label>
+                            <input type="text" id="add" class="styles-input" name="add" placeholder="Adicione sua tarefa do dia">
+                        </div>
+
+                        <img height="30" width="30" src="./Icons/circle-plus-solid.svg" alt="Adicinoar" id="AddIcon"
+                            type="submit" onclick="funcActivities.add(document.getElementById('add').value)">
+
+                    </form>
+                </div>
+
+                <div id="seachForm">
+                    <h2>Pesquisar</h2>
+                    <form action="" onsubmit="">
+
+                        <div class="input-group">
+                            <label for="search"></label>
+                            <input type="text" id="search" class="styles-input" name="search" placeholder="Pesquise pela sua atividade"
+                                onkeyup="funcActivities.search(document.getElementById('search').value)">
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="activities">
+            <div class="container">
+                <h2>Atividades</h2>
+
+                <table id="activities-table">
+                    <thead>
+                        <tr>
+                            <th>Atividades</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody align="center">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <h3>To do dev.List</h3>
+    </footer>
+</body>
+
+<script src=./filtro.js></script>
+
+</html>
